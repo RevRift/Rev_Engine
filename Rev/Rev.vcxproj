@@ -59,6 +59,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>REV_PLATFORM_WINDOWS;REV_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Rev\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,6 +74,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>REV_PLATFORM_WINDOWS;REV_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Rev\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,12 +84,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Rev\Log.h" />
     <ClInclude Include="src\Rev.h" />
     <ClInclude Include="src\Rev\Application.h" />
     <ClInclude Include="src\Rev\Core.h" />
     <ClInclude Include="src\Rev\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Rev\Log.cpp" />
     <ClCompile Include="src\Rev\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
