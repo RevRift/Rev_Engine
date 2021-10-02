@@ -29,7 +29,8 @@ project "Rev"
 
     includedirs
     {
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "Rev/src"
     }
 
     filter "system:windows"

@@ -4,6 +4,7 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Rev {
 
@@ -23,9 +24,9 @@ namespace Rev {
 }							
 
 // Core log macros
-#define REV_CORE_TRACE(...)      ::Rev::Log::GetCoreLogger()->trace(__VA_ARGS__);
+#define REV_CORE_TRACE(...)     ::Rev::Log::GetCoreLogger()->trace(__VA_ARGS__);
 #define REV_CORE_INFO(...)      ::Rev::Log::GetCoreLogger()->info(__VA_ARGS__);
-#define REV_CORE_WARN(...)     ::Rev::Log::GetCoreLogger()->warn(__VA_ARGS__);
+#define REV_CORE_WARN(...)      ::Rev::Log::GetCoreLogger()->warn(__VA_ARGS__);
 #define REV_CORE_ERROR(...)     ::Rev::Log::GetCoreLogger()->error(__VA_ARGS__);
 #define REV_CORE_FATAL(...)     ::Rev::Log::GetCoreLogger()->fatal(__VA_ARGS__);
 	

@@ -4,6 +4,9 @@
     <Filter Include="Rev">
       <UniqueIdentifier>{321D880B-9E26-887C-27A2-9E7C93AA937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rev\Events">
+      <UniqueIdentifier>{D6BCF627-C274-3875-2B7C-11D11753D365}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Rev.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Rev\EntryPoint.h">
       <Filter>Rev</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rev\Events\ApplicationEvent.h">
+      <Filter>Rev\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rev\Events\Event.h">
+      <Filter>Rev\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rev\Events\KeyEvent.h">
+      <Filter>Rev\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rev\Events\MouseEvent.h">
+      <Filter>Rev\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Rev\Log.h">
       <Filter>Rev</Filter>

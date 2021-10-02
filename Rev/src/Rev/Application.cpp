@@ -1,5 +1,6 @@
 #include "Application.h"
-#include <stdio.h>
+#include "Rev/Events/ApplicationEvent.h"
+#include "Rev/Log.h"
 
 namespace Rev {
 
@@ -9,7 +10,9 @@ namespace Rev {
 	{}
 	void Application::Run()
 	{
-		printf("Welcome to Rev Engine\n");
+		REV_CORE_TRACE("Welcome to Rev Engine!");
+		WindowResizeEvent e(7200, 800);
+		REV_CORE_INFO(e);
 	}
 
 }
