@@ -34,6 +34,7 @@
     <ClInclude Include="src\Rev\Log.h">
       <Filter>Rev</Filter>
     </ClInclude>
+    <ClInclude Include="src\revpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Rev\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Rev\Log.cpp">
       <Filter>Rev</Filter>
     </ClCompile>
+    <ClCompile Include="src\revpch.cpp" />
   </ItemGroup>
 </Project>

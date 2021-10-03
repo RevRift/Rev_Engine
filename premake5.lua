@@ -21,6 +21,9 @@ project "Rev"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "revpch.h"
+    pchsource "Rev/src/revpch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",

@@ -1,8 +1,6 @@
 #pragma once
 
 #include "Rev/Core.h"
-#include <string>
-#include <functional>
 
 namespace Rev {
 

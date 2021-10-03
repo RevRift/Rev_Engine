@@ -1,3 +1,5 @@
+#include "revpch.h"
+
 #include "Application.h"
 #include "Rev/Events/ApplicationEvent.h"
 #include "Rev/Log.h"
