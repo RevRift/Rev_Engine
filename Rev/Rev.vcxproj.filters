@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Rev">
       <UniqueIdentifier>{321D880B-9E26-887C-27A2-9E7C93AA937C}</UniqueIdentifier>
     </Filter>
@@ -9,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Rev.h" />
     <ClInclude Include="src\Rev\Application.h">
       <Filter>Rev</Filter>
@@ -34,9 +43,15 @@
     <ClInclude Include="src\Rev\Log.h">
       <Filter>Rev</Filter>
     </ClInclude>
+    <ClInclude Include="src\Rev\Window.h">
+      <Filter>Rev</Filter>
+    </ClInclude>
     <ClInclude Include="src\revpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Rev\Application.cpp">
       <Filter>Rev</Filter>
     </ClCompile>

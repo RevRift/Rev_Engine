@@ -13,6 +13,11 @@ workspace "Rev"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Rev/vendor/GLFW/include"
+
+include "Rev/vendor/GLFW"
+
 project "Rev"
     location "Rev"
     kind "SharedLib"
@@ -33,7 +38,14 @@ project "Rev"
     includedirs
     {
         "%{prj.name}/vendor/spdlog/include",
-        "Rev/src"
+        "Rev/src",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"

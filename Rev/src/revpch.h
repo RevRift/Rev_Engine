@@ -12,7 +12,7 @@
 #include <unordered_set>
 #include <unordered_map>
 
-
+#include "Rev/Log.h"
 
 #ifdef REV_PLATFORM_WINDOWS
 	#include <Windows.h>
