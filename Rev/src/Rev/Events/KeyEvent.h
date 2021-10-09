@@ -50,6 +50,6 @@ namespace Rev {
 			return oss.str();
 		}
 		
-		EVENT_CLASS_TYPE(KeyTyped)
+		EVENT_CLASS_TYPE(KeyReleased)
 	};
 }
