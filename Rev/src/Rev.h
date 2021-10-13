@@ -2,6 +2,7 @@
 
 // for Rev applications to include
 #include "Rev/Application.h"
+#include "Rev/Layer.h"
 #include "Rev/Log.h"
 
 //-------- Entry point ------

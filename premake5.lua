@@ -66,14 +66,17 @@ project "Rev"
     
     filter "configurations:Debug"
         defines "REV_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "REV_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "REV_DIST"
+        buildoptions "/MD"
         optimize "On"
     
 
@@ -117,12 +120,15 @@ project "Sandbox"
     
     filter "configurations:Debug"
         defines "REV_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "REV_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "REV_DIST"
+        buildoptions "/MD"
         optimize "On"
