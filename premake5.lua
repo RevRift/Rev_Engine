@@ -14,9 +14,14 @@ workspace "Rev"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
+IncludeDir["spdlog"] = "Rev/vendor/spdlog/include"
 IncludeDir["GLFW"] = "Rev/vendor/GLFW/include"
+IncludeDir["Glad"] = "Rev/vendor/Glad/include"
+IncludeDir["ImGui"] = "Rev/vendor/imgui"
 
 include "Rev/vendor/GLFW"
+include "Rev/vendor/Glad"
+include "Rev/vendor/imgui"
 
 project "Rev"
     location "Rev"
@@ -37,14 +42,18 @@ project "Rev"
 
     includedirs
     {
-        "%{prj.name}/vendor/spdlog/include",
         "Rev/src",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.spdlog}",
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
+        "ImGui",
         "opengl32.lib"
     }
 
@@ -56,7 +65,8 @@ project "Rev"
         defines
         {
             "REV_PLATFORM_WINDOWS",
-            "REV_BUILD_DLL"
+            "REV_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
         
         postbuildcommands

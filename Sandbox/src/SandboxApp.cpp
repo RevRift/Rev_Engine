@@ -9,7 +9,6 @@ public:
 
 	void OnUpdate() override
 	{
-		REV_INFO("Example layer was updated");
 	}
 
 	void OnEvent(Rev::Event& event) override
@@ -24,6 +23,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer);
+		PushOverlay(new Rev::ImGuiLayer());
 	}
 	~Sandbox()
 	{}

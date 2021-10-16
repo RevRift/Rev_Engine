@@ -4,17 +4,29 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
     <Filter Include="Rev">
       <UniqueIdentifier>{321D880B-9E26-887C-27A2-9E7C93AA937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rev\Debug">
+      <UniqueIdentifier>{28C5F365-942F-A8DC-DD6D-598249178631}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Rev\Events">
       <UniqueIdentifier>{D6BCF627-C274-3875-2B7C-11D11753D365}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRendererLoader.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -24,6 +36,9 @@
     </ClInclude>
     <ClInclude Include="src\Rev\Core.h">
       <Filter>Rev</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rev\ImGui\ImGuiLayer.h">
+      <Filter>Rev\Debug</Filter>
     </ClInclude>
     <ClInclude Include="src\Rev\EntryPoint.h">
       <Filter>Rev</Filter>
@@ -55,11 +70,17 @@
     <ClInclude Include="src\revpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Rev\Application.cpp">
       <Filter>Rev</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rev\ImGui\ImGuiLayer.cpp">
+      <Filter>Rev\Debug</Filter>
     </ClCompile>
     <ClCompile Include="src\Rev\Layer.cpp">
       <Filter>Rev</Filter>
