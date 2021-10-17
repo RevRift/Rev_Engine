@@ -1,6 +1,6 @@
 #pragma once
+#include "revpch.h"
 
-#include "Core.h"
 #include "Window.h"
 #include "Rev/Events/Event.h"
 #include "Rev/Events/ApplicationEvent.h"
@@ -25,7 +25,7 @@ namespace Rev {
 		inline Window& GetWindow() { return *m_Window; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
-
+	private:
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 		LayerStack m_LayerStack;

@@ -1,4 +1,5 @@
 #pragma once
+#include "revpch.h"
 
 #include "Event.h"
 
@@ -35,7 +36,7 @@ namespace Rev {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class AppTickEvent : public Event
+	class REV_API AppTickEvent : public Event
 	{
 	public:
 		AppTickEvent() = default;
@@ -44,7 +45,7 @@ namespace Rev {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class AppUpdateEvent : public Event
+	class REV_API AppUpdateEvent : public Event
 	{
 	public:
 		AppUpdateEvent() = default;

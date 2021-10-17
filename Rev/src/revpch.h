@@ -13,6 +13,7 @@
 #include <unordered_map>
 
 #include "Rev/Log.h"
+#include "Rev/Core.h"
 
 #ifdef REV_PLATFORM_WINDOWS
 	#include <Windows.h>

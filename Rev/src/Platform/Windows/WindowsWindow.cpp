@@ -5,7 +5,7 @@
 #include "Rev/Events/KeyEvent.h"
 #include "Rev/Events/MouseEvent.h"
 
-#include "glad/glad.h"
+#include <glad/glad.h>
 
 namespace Rev {
 	
@@ -59,17 +59,18 @@ namespace Rev {
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height) 
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
 			data.Width = width;
 			data.Height = height;
 
 			WindowResizeEvent event(width, height);
 			data.EventCallback(event);
-				
 		});
 
 		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
 			WindowCloseEvent event;
 			data.EventCallback(event);
 		});
@@ -99,6 +100,14 @@ namespace Rev {
 					break;
 				}
 			}
+		});
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode) 
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
+			KeyTypedEvent event(keycode);
+			data.EventCallback(event);
 		});
 
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
