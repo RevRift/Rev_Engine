@@ -158,12 +158,12 @@
     <ClInclude Include="src\Rev.h" />
     <ClInclude Include="src\Rev\Application.h" />
     <ClInclude Include="src\Rev\Core.h" />
-    <ClInclude Include="src\Rev\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Rev\EntryPoint.h" />
     <ClInclude Include="src\Rev\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Rev\Events\Event.h" />
     <ClInclude Include="src\Rev\Events\KeyEvent.h" />
     <ClInclude Include="src\Rev\Events\MouseEvent.h" />
+    <ClInclude Include="src\Rev\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Rev\Layer.h" />
     <ClInclude Include="src\Rev\LayerStack.h" />
     <ClInclude Include="src\Rev\Log.h" />
