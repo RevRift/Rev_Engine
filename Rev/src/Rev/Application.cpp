@@ -1,6 +1,7 @@
 #include "revpch.h"
 #include "Application.h"
 
+#include "Rev/Input.h"
 #include <glad/glad.h>
 
 namespace Rev {

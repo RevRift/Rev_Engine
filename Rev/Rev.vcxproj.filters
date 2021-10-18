@@ -68,6 +68,10 @@
       <Filter>Rev</Filter>
     </ClInclude>
     <ClInclude Include="src\revpch.h" />
+    <ClInclude Include="src\Rev\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Rev\KeyCodes.h" />
+    <ClInclude Include="src\Rev\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
@@ -92,5 +96,6 @@
       <Filter>Rev</Filter>
     </ClCompile>
     <ClCompile Include="src\revpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
