@@ -1,4 +1,3 @@
-
 -- Engine
 
 workspace "Rev"
@@ -19,6 +18,7 @@ IncludeDir["spdlog"] = "Rev/vendor/spdlog/include"
 IncludeDir["GLFW"] = "Rev/vendor/GLFW/include"
 IncludeDir["Glad"] = "Rev/vendor/Glad/include"
 IncludeDir["ImGui"] = "Rev/vendor/imgui"
+IncludeDir["glm"] = "Rev/vendor/glm"
 
 include "Rev/vendor/GLFW"
 include "Rev/vendor/Glad"
@@ -39,7 +39,9 @@ project "Rev"
     files
     {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
+        "%{prj.name]/vendor/glm/glm/**.hpp",
+        "%{prj.name}/vendor/glm/glm/**.inl"
     }
 
     includedirs
@@ -48,7 +50,8 @@ project "Rev"
         "%{IncludeDir.spdlog}",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.glm}"
     }
 
     links
@@ -111,8 +114,9 @@ project "Sandbox"
 
     includedirs
     {
-        "Rev/vendor/spdlog/include",
-        "Rev/src"
+        "Rev/src",
+        "%{IncludeDir.spdlog}",
+        "%{IncludeDir.glm}"
     }
 
     links

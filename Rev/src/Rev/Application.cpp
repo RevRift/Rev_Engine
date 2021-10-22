@@ -36,8 +36,6 @@ namespace Rev {
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(REV_BIND_EVENT_FN(Application::OnWindowClose));
 
-		REV_CORE_TRACE("{0}", e);
-
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
 			if (e.Handled)

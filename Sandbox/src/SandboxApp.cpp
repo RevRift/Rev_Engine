@@ -7,9 +7,11 @@ public:
 		: Layer("Example")
 	{}
 
+
+
 	void OnUpdate() override
 	{
-
+		
 	}
 
 	void OnEvent(Rev::Event& event) override
