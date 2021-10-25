@@ -1,1 +1,3 @@
-
+[submodule "Rev/vendor/GLFW"]
+	path = Rev/vendor/GLFW
+	url = https://github.com/glfw/glfw.git
