@@ -5,6 +5,7 @@
 #include "Rev/Events/KeyEvent.h"
 #include "Rev/Events/MouseEvent.h"
 
+#include <GLFW/glfw3.h>
 #include <glad/glad.h>
 
 namespace Rev {

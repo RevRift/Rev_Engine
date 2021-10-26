@@ -1,3 +1,12 @@
 [submodule "Rev/vendor/GLFW"]
 	path = Rev/vendor/GLFW
 	url = https://github.com/glfw/glfw.git
+[submodule "Rev/vendor/spdlog"]
+	path = Rev/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "Rev/vendor/imgui"]
+	path = Rev/vendor/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "Rev/vendor/glm"]
+	path = Rev/vendor/glm
+	url = https://github.com/g-truc/glm.git
