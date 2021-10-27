@@ -5,9 +5,6 @@
 #include "Rev/Events/KeyEvent.h"
 #include "Rev/Events/MouseEvent.h"
 
-#include <GLFW/glfw3.h>
-#include <glad/glad.h>
-
 namespace Rev {
 	
 	static bool s_GLFWInitialised = false;
@@ -42,10 +39,9 @@ namespace Rev {
 
 		if (!s_GLFWInitialised)
 		{
-			// TODO: glfwTerminate on-system window
+			glfwSetErrorCallback(GLFWErrorCallback);
 			int success = glfwInit();
 			REV_CORE_ASSERT(success, "Couldn't initliase GLFW");
-			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialised = true;
 		} 
 
@@ -56,7 +52,10 @@ namespace Rev {
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
-		// Set up GLFW callbacks
+		/***********************************************************************************/
+		/*************************** Set up GLFW callbacks    ***************************/
+		/***********************************************************************************/
+
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height) 
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
@@ -152,6 +151,7 @@ namespace Rev {
 	void WindowsWindow::Shutdown()
 	{
 		glfwDestroyWindow(m_Window);
+		glfwTerminate();
 	}
 
 	void WindowsWindow::OnUpdate()

@@ -15,12 +15,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["spdlog"] = "Rev/vendor/spdlog/include"
-IncludeDir["GLFW"] = "Rev/vendor/GLFW/include"
+-- IncludeDir["GLFW"] = "Rev/vendor/GLFW/include"
 IncludeDir["Glad"] = "Rev/vendor/Glad/include"
 IncludeDir["ImGui"] = "Rev/vendor/imgui"
 IncludeDir["glm"] = "Rev/vendor/glm"
 
-include "Rev/vendor/GLFW"
+-- include "Rev/vendor/GLFW"
 include "Rev/vendor/Glad"
 include "Rev/vendor/imgui"
 
@@ -48,7 +48,7 @@ project "Rev"
     {
         "Rev/src",
         "%{IncludeDir.spdlog}",
-        "%{IncludeDir.GLFW}",
+        -- "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
         "%{IncludeDir.glm}"
@@ -56,7 +56,7 @@ project "Rev"
 
     links
     {
-        "GLFW",
+       --  "GLFW",
         "Glad",
         "ImGui",
         "opengl32.lib"
