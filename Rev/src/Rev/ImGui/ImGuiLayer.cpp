@@ -12,6 +12,8 @@
 
 namespace Rev {
 
+	static bool s_ImGuiInitialised = false;
+
 	ImGuiLayer::ImGuiLayer()
 	{}
 
@@ -51,7 +53,12 @@ namespace Rev {
 		io.KeyMap[ImGuiKey_Y] = GLFW_KEY_Y;
 		io.KeyMap[ImGuiKey_Z] = GLFW_KEY_Z;
 
-		ImGui_ImplOpenGL3_Init("#version 410");
+		if (!s_ImGuiInitialised) 
+		{
+			ImGui_ImplOpenGL3_Init("#version 410");
+			s_ImGuiInitialised = true;
+		}
+		
 	}
 
 	void ImGuiLayer::OnDetach()
@@ -66,7 +73,7 @@ namespace Rev {
 		io.DisplaySize = ImVec2(app.GetWindow().GetWidth(), app.GetWindow().GetHeight());
 
 		float time = (float)glfwGetTime();
-		io.DeltaTime = m_Time > 0.0 ? (time - m_Time) : (1.0f - 60.0f);
+		io.DeltaTime = m_Time > 0.0f ? (time - m_Time) : (1.0f / 60.0f);
 		m_Time = time;
 
 		ImGui_ImplOpenGL3_NewFrame();
